@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.3">
-      <projectUrl>https://github.com/EA-Ilyas-Husain/test5.git</projectUrl>
+      <projectUrl>https://github.com/EA-Ilyas-Husain/jenkins-nginx.git</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -13,7 +13,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/EA-Ilyas-Husain/test5.git</url>
+        <url>https://github.com/EA-Ilyas-Husain/jenkins-nginx.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -46,9 +46,7 @@ sudo docker build . -t $IMAGE_NAME
 sudo docker login -u ilyashusain -p 5082isa
 sudo docker push $IMAGE_NAME
 
-IMAGE_NAME="ilyashusain/hellowhale:${BUILD_NUMBER}"
-sudo kubectl set image deployment/hellowhale hellowhale=$IMAGE_NAME
-sudo docker exec nginx nginx -s reload</command>
+      </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
